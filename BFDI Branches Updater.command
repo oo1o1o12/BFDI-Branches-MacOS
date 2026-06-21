@@ -30,9 +30,10 @@ fi
 # godot pck files are cross-platform, only thing that's not is the executable, which is obvious
 curl -o .bfdibranches_tmp.pck https://bfdibranches.com/bfdibranches.pck
 
+# checking if it's already up to date
 if [ -f "BFDI Branches.pck" ]; then
-	serversum=$(shasum -a 256 .bfdibranches_tmp.pck | cut -d' ' -f1)
-	localsum=$(shasum -a 256 "BFDI Branches.pck" | cut -d' ' -f1)
+	serversum=$(shasum .bfdibranches_tmp.pck | cut -d' ' -f1)
+	localsum=$(shasum "BFDI Branches.pck" | cut -d' ' -f1)
 	
 	if [ "$serversum" = "$localsum" ]; then
 		echo "It's already up to date."
