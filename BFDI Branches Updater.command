@@ -25,28 +25,29 @@ while true; do
 	esac
 done
 printf "Install custom PCK? (y/n) \n"
-while true; do
-	read -r choice
-	case "$choice" in
-	y)
+read -r choice
+case "$choice" in
+y)
+	while true; do
 		printf "Enter the path of the PCK:"
 		read -r path
 		path="${path//\\ / }"
-		if [[ $path == *.pck ]] then
+		if [[ $path == *.pck ]]; then
 			cp $path "BFDI Branches.pck"
 			echo "Custom PCK has been installed."
+			exit 0
 		else
-			echo "That's not a PCK. \n Enter a path:"
+			echo "That's not a PCK."
 		fi
-		;;
-	n)
-		break
-		;;
-	*)
-		echo "(y/n)"
-		;;
-	esac
-done
+	done
+	;;
+n)
+	break
+	;;
+*)
+	echo "(y/n)"
+	;;
+esac
 if [ -f ".bfdibranches_tmp.pck" ]; then
 	rm .bfdibranches_tmp.pck
 fi
