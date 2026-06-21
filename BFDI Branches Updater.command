@@ -27,7 +27,7 @@ done
 if [ -f ".bfdibranches_tmp.pck" ]; then
 	rm .bfdibranches_tmp.pck
 fi
-# godot pck files are cross-platform, only thing that's not is the executable, which is obvious
+# godot pck files are cross-platform, which is why updating in bfdi branches works at all
 curl -o .bfdibranches_tmp.pck https://bfdibranches.com/bfdibranches.pck
 
 # checking if it's already up to date
