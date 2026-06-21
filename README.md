@@ -11,3 +11,6 @@ xattr -d com.apple.quarantine /path/to/whatever
 chmod +x /path/to/whatever
 ```
 obviously replace /path/to/whatever to whatever you want to run
+
+## how to update
+the update button won't work in-game, you have to use the pck manager script to update your game
