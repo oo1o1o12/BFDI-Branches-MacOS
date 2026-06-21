@@ -24,6 +24,28 @@ while true; do
 		fi
 	esac
 done
+printf "Install custom PCK? (y/n) \n"
+while true; do
+	read -r choice
+	case "$choice" in
+	y)
+		printf "Enter the path of the PCK:"
+		read -r path
+		path="${path//\\ / }"
+		if [[ $path == *.pck ]] then
+			
+		else
+			echo "That's not a PCK. \n Enter a path:"
+		fi
+		;;
+	n)
+		break
+		;;
+	*)
+		echo "(y/n)"
+		;;
+	esac
+done
 if [ -f ".bfdibranches_tmp.pck" ]; then
 	rm .bfdibranches_tmp.pck
 fi
