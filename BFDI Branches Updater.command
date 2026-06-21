@@ -6,10 +6,6 @@ if ! ping -c 1 -W 2 8.8.8.8 &> /dev/null; then
 	echo "You'll need internet connection to use this script."
 	exit 1
 fi
-if ! which wget >/dev/null; then
-	echo "You'll need wget to proceed."
-	exit 1
-fi
 # path stuff
 printf "Enter the path to BFDI Branches: \n"
 while true; do
@@ -31,7 +27,7 @@ done
 if [ -f ".bfdibranches_tmp.pck" ]; then
 	rm .bfdibranches_tmp.pck
 fi
-# godot pck files are cross-platform, only thing that's not is the executable, which is obvious.
+# godot pck files are cross-platform, only thing that's not is the executable, which is obvious
 curl -o .bfdibranches_tmp.pck https://bfdibranches.com/bfdibranches.pck
 
 if [ -f "BFDI Branches.pck" ]; then
