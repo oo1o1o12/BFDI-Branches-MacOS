@@ -33,7 +33,8 @@ while true; do
 		read -r path
 		path="${path//\\ / }"
 		if [[ $path == *.pck ]] then
-			
+			cp $path "BFDI Branches.pck"
+			echo "Custom PCK has been installed."
 		else
 			echo "That's not a PCK. \n Enter a path:"
 		fi
