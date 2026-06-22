@@ -4,7 +4,7 @@
 
 ```'BFDI Branches.zip'``` is the app itself, the game's assets aren't included due to github limitations
 
-```'BFDI Branches PCK Manager.command'``` is a bash script to update/install the game, or install pck replacement mods
+```'BFDI Branches PCK Manager.command'``` is a bash script to install/update the game
 
 ## fixing apple assuming
 > "Apple could not verify “something” is free of malware that may blah blah blah blah."
@@ -18,3 +18,7 @@ obviously replace /path/to/whatever to whatever you want to run
 ### the pck manager has another error when trying to open!!!
 then run:
 ```chmod +x /path/to/pckmanager```
+
+# known issues
+the update button doesn't work in-game (that's why the pck manager exists)
+discord rpc doesn't work
