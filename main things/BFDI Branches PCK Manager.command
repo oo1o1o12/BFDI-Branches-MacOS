@@ -6,6 +6,11 @@ if ! ping -c 1 -W 2 8.8.8.8 &> /dev/null; then
 	echo "You'll need internet connection to use this script."
 	exit 1
 fi
+
+# look i'm using apis i'm so smart
+version=$(curl -s https://api.bfdibranches.com/version.php)
+echo "Latest BFDI Branches version is $version"
+
 # path stuff
 printf "Enter the path to BFDI Branches: \n"
 while true; do
@@ -24,9 +29,10 @@ while true; do
 		fi
 	esac
 done
+
 printf "Install custom PCK? (y/n) "
 while true; do
-	read -r choice
+	read choice
 	case "$choice" in
 	y)
 		while true; do
