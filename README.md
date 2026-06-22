@@ -1,6 +1,7 @@
 <p align="center">
 <img width="640" height="360" alt="it's a giant apple" src="https://github.com/user-attachments/assets/806b2f09-dc8d-498c-ac84-2f50d4f7f275" />
 </p>
+
 ```'BFDI Branches.zip'``` is the app itself, the pck is not included due to github limitations (use the pck manager to download the pck)
 
 ```'BFDI Branches PCK Manager.command'``` is a bash script to update/install the game, or install pck replacement mods
