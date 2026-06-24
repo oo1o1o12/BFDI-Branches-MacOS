@@ -38,7 +38,7 @@ while true; do
 		while true; do
 			printf "Enter the path of the PCK: \n"
 			read -r path
-			path="${path//\\ / }"
+			path="${path//\\/}"
 			if [[ $path == *.pck ]]; then
 				if [ -f "BFDI Branches.pck" ]; then
 					printf "A PCK file already exists, overwrite? (y/n) "
@@ -52,7 +52,7 @@ while true; do
 						;;
 					esac
 				fi
-				cp $path "BFDI Branches.pck"
+				cp "$path" "BFDI Branches.pck"
 				echo "Custom PCK has been installed."
 				exit 0
 			else
